@@ -1,0 +1,12 @@
+version: '3'
+services:
+  pykrotik:
+    build: .
+    image: pykrotik:latest
+    volumes:
+      - ./devices.yaml:/devices.yaml
+      - ./output:/output/
+    stdin_open: true
+    tty: true
+    restart: always
+    
