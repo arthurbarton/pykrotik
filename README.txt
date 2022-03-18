@@ -8,16 +8,17 @@ Basic mikrotik backups
 /user add disabled=no name=backups group=backups password=<something secret>
 ```
 
-## Setup the repo
+## docker
+docker-compose up -d
 
-You need to install the [paramiko/paramiko](https://github.com/paramiko/paramiko) library
+## Setup manually
 
 ```
-pip3 install --user paramiko
+pyenv exec pip3 install --user -r app/requirements.txt
 ```
 
 Create the config file. Use the example and edit to suit
 
 ```
-cp example.ini config.ini
+cp example.yaml devices.yaml
 ```
