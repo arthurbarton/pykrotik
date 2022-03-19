@@ -73,7 +73,6 @@ today = (datetime.date.today()).strftime("%Y%m%d")
 # loop over the config file
 for device in config:
     remoteDevice = config[device]
-    print(config[device])
 
     # ssh client + connect it
     client = paramiko.SSHClient()
